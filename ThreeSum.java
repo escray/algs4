@@ -42,6 +42,6 @@ public class ThreeSum
 		//StdOut.println(count(a));
 		double time = stopwatch.elapsedTime();
 
-		StdOut.println(cnt + "triples " + time);
+		StdOut.println(cnt + " triples " + time);
 	}
 }
