@@ -1,5 +1,8 @@
 // brute-force ThreeSum
 import java.util.Arrays;
+import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.StdRandom;
 
 public class ThreeSum
 {
@@ -26,10 +29,19 @@ public class ThreeSum
 
 	public static void main(String[] args)
 	{
-		int[] a = In.readInts(args[0]);
-
+		//In in = new In(args[0]);
+		//int[] a = in.readAllInts();
+		int N = Integer.parseInt(args[0]);
+		int[] a = new int[N];
+		for (int i = 0; i < N; i++)
+		{
+			a[i] = StdRandom.uniform(-1000000, 1000000);
+		}
 		Stopwatch stopwatch = new Stopwatch();
-		StdOut.println(count(a));
+		int cnt = ThreeSum.count(a);
+		//StdOut.println(count(a));
 		double time = stopwatch.elapsedTime();
+
+		StdOut.println(cnt + "triples " + time);
 	}
 }
