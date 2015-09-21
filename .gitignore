@@ -1,4 +1,7 @@
 *.class
+*.zip
+algs4-data/
+percolation/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
