@@ -2,6 +2,8 @@
 *.zip
 .DS_Store
 algs4-data/
+algs4-master/
+kevin-wayne-algs4-master/
 percolation/
 
 # Mobile Tools for Java (J2ME)

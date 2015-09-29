@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.StdOut;
 public class FixedCapacityStackOfStrings
 {
   private String[] a;
-  private int N;
+  private int N = 0;
 
   public FixedCapacityStackOfStrings(int cap)
   {
@@ -23,12 +23,21 @@ public class FixedCapacityStackOfStrings
 
   public void push(String item)
   {
+    // use to index into array;
+    // then increment N
     a[N++] = item;
   }
 
   public String pop()
   {
-    return a[--N];
+    // decrement N;
+    // then use to index into array
+    String item =  a[--N];
+    // avoid loitering
+    // garbage collector can relaim memory
+    // only if no outstanding references
+    s[N] = null;
+    return item;
   }
 
   public static void main(String[] args)

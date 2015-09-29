@@ -3,10 +3,14 @@ import edu.princeton.cs.algs4.StdIn;
 public class FixedCapacityStack<Item>
 {
   private Item[] a;
-  private int N;
+  private int N = 0;
 
   public FixedCapacityStack(int cap)
   {
+    // the way it should be
+    // s = new Item[cap];
+    // generic array creation not allow in java
+    // the ugly cast
     a = (Item[]) new Object[cap];
   }
 
